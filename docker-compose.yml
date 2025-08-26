@@ -1,0 +1,7 @@
+services:
+  labvita-price:
+    build: ../../../Users/alexe/OneDrive/Рабочий стол/Новая папка
+    ports:
+      - '3000:3000'
+    env_file:
+      - ../../../Users/alexe/OneDrive/Рабочий стол/Новая папка/.env

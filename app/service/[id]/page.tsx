@@ -30,8 +30,20 @@ export default async function ServicePage(props: { params: Promise<{ id: string 
   const data = await getServiceData(id);
 
   if (!data) {
-    return <h1>Ошибка загрузки услуги</h1>;
+    return (
+      <div className="flex items-center justify-center h-screen" style={{ backgroundColor: '#141414' }}>
+        <h1 className="text-4xl font-bold" style={{ color: '#eaeaea' }}>
+          Ошибка загрузки услуги
+        </h1>
+      </div>
+    );
   }
 
-  return <h1>Стоимость услуги: {data.price} ₽</h1>;
+  return (
+    <div className="flex items-center justify-center h-screen" style={{ backgroundColor: '#141414' }}>
+      <h1 className="text-5xl font-bold" style={{ color: '#eaeaea' }}>
+        Стоимость услуги: {data.price} ₽
+      </h1>
+    </div>
+  );
 }
